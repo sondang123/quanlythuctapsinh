@@ -46,16 +46,18 @@ function App() {
   };
   const HandleSearch = (searchName) =>{
     // const membersCoppy = [...users];
+    if(searchName !==''){
+      const user = currentUser.current.filter((memberName) =>
+        memberName.name === searchName ||
+        memberName.id === Number(searchName) ||
+        memberName.phone=== searchName ||
+        memberName.address === searchName ||
+        memberName.year === Number(searchName)
+  
+      )
+      setUsers(user)
+    }
     
-    const user = currentUser.current.filter((memberName) =>
-      memberName.name === searchName ||
-      memberName.id === Number(searchName) ||
-      memberName.phone=== searchName ||
-      memberName.address === searchName ||
-      memberName.year === Number(searchName)
-
-    )
-    setUsers(user)
   }
 
   return (
