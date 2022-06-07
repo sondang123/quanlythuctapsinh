@@ -17,8 +17,8 @@ const Modal = ({ onAdd ,member,HandleEdit,type}) => {
   
   const HandlSubmit = () => {
       if(!user.name && !user.address && !user.phone && !user.year){
-        alert('Hãy Nhập Thông Tin Đầy Đủ')
-        // toast.error('Hãy Nhập Đầy Đủ Thông Tin !')
+        // alert('Hãy Nhập Thông Tin Đầy Đủ')
+        toast.error('Hãy Nhập Đầy Đủ Thông Tin !')
       }else{
         type==='add'? onAdd({...user,id:uuidv4()}) :  HandleEdit(user)
         setUser({
@@ -107,7 +107,7 @@ const Modal = ({ onAdd ,member,HandleEdit,type}) => {
             />
             {type==='add' ?
             <button className="submitModal" onClick={HandlSubmit}>
-              SUbmit
+              Submit
             </button>
             :
             <button className="submitModal" onClick={HandlSubmit}>

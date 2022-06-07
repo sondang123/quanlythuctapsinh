@@ -76,7 +76,7 @@ function App() {
         type={'edit'}
       />
 
-      {/* <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
@@ -86,7 +86,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      /> */}
+      />
     </div>
   );
 }
