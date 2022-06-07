@@ -1,0 +1,43 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(50,122,129);
+    padding: 20px 50px;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    
+}
+.inputForm{
+    position: relative;
+}
+input{
+    padding: 10px;
+}
+.inputForm i{
+    position: absolute;
+    right: 5px;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    padding: 11px;
+    background-color: #c4e6cf;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+}
+.addBtn{
+    background-color: #c4e6cf;
+    color: rgb(50,122,129);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.addBtn:hover{
+    opacity: 0.7;
+}

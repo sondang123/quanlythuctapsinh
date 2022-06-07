@@ -1,0 +1,67 @@
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 7, 9, 0.666);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+
+.formtModal{
+    width: 40%;
+    
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.contentModal{
+    background-color: rgb(50,122,129);
+    padding:  30px 20px;
+    text-align: left;
+}
+label{
+    display: block;
+    color: #c4e6cf;
+    padding: 10px 0;
+}
+input{
+    width: 100%;
+
+
+}
+.submitModal{
+    padding: 10px 10px;
+    width: 100%;
+    margin-top: 20px;
+    background-color:#b8ebea ;
+    cursor: pointer;
+    border: none;
+
+}
+.headerModal{
+    background-color: #b8ebea;
+    padding:  30px 20px;
+}
+.headerModal-title{
+    color:rgb(50,122,129)
+}
+.headerModal-close{
+    font-size: 30px;
+    /* background-color: black; */
+    color: rgb(210, 50, 18);
+    cursor: pointer;
+}
+.headerModal-close:hover,
+.submitModal:hover{
+    opacity: 0.8;
+}
+.headerModal{
+    display: flex;
+    justify-content: space-between;
+}
