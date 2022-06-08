@@ -2,7 +2,7 @@
 import HeaderComponent from "./component/HeaderComponent.js";
 import ContentComponent from "./component/ContentComponent.js";
 import { useState ,useRef} from "react";
-import { members } from "./component/dbUsers";
+import { members } from "./component/dbUsers.js";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Modal from "./component/Modal.js";
@@ -37,6 +37,7 @@ function App() {
       membersCoppy[objIndex].address = user.address
       membersCoppy[objIndex].phone = user.phone
       membersCoppy[objIndex].year = user.year
+      membersCoppy[objIndex].imgUrl = user.imgUrl
       // console.log(objIndex)
       // console.log(membersCoppy[objIndex])
       // setUsers(membersCoppy)
@@ -76,7 +77,7 @@ function App() {
         type={'edit'}
       />
 
-      <ToastContainer
+      {/* <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
@@ -86,7 +87,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </div>
   );
 }

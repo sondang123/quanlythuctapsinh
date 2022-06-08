@@ -1,22 +1,26 @@
-
 import ModalConfirm from "./ModalConfirm.js";
 import Modal from "./Modal.js";
+// import img from '../assets/images/Hoan.png';
 
-function ContentTable({ members, HandleDelete,HandleEdit}) {
-  if(members.length === 0){
+function ContentTable({ members, HandleDelete, HandleEdit }) {
+  if (members.length === 0) {
     return (
       <tr>
         <td colSpan={6}>
           <h1>Chưa Có Thành Viên Nào !</h1>
         </td>
       </tr>
-    )
+    );
   }
   return members.map((member, index) => {
     return (
       <tr key={index} className="data">
         <td className="ID">{index}</td>
         <td>{member.name}</td>
+        <td>
+          {/* <img src={require('../assets/images/Hoan.png')} alt={member.name} /> */}
+          <img src={member.imgUrl} />
+        </td>
         <td>{member.address}</td>
         <td>{member.phone}</td>
         <td>{member.year}</td>
@@ -24,10 +28,7 @@ function ContentTable({ members, HandleDelete,HandleEdit}) {
           {/* <span className="delete" onClick={() => HandleDelete(member.id)}>
             <i className="fa-solid fa-trash-can"></i>
           </span> */}
-          <ModalConfirm 
-            HandleDelete={HandleDelete}
-            member = {member}
-          />
+          <ModalConfirm HandleDelete={HandleDelete} member={member} />
         </td>
         <td>
           {/* <ModalEdit
@@ -35,13 +36,9 @@ function ContentTable({ members, HandleDelete,HandleEdit}) {
             member = {member}
             
           /> */}
-          <Modal 
-            HandleEdit = {HandleEdit}
-            member = {member}
-          />
+          <Modal HandleEdit={HandleEdit} member={member} />
         </td>
       </tr>
-      
     );
   });
 }

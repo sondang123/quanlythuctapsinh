@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
  const ModalConfirm =({HandleDelete,member}) =>{
     const [close, SetClose] = useState(false);
@@ -23,7 +23,7 @@ import { ToastContainer, toast } from 'react-toastify';
         <span className="delete" onClick={handleClose}>
             <i className="fa-solid fa-trash-can"></i>
         </span>
-        
+      
         <div
           className="modal"
           style={
@@ -49,7 +49,7 @@ import { ToastContainer, toast } from 'react-toastify';
               <button className="submitModal" onClick={() =>HandleConfirm(member.id)}>
                 xác nhận
               </button>
-              <button className="submitModal" onClick={()=>SetClose(false)}>
+              <button className="cancerDelete" onClick={()=>SetClose(false)}>
                 cancer
               </button>
             </div>

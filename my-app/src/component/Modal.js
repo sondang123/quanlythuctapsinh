@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 const Modal = ({ onAdd ,member,HandleEdit,type}) => {
@@ -26,6 +26,7 @@ const Modal = ({ onAdd ,member,HandleEdit,type}) => {
             address: "",
             phone: "",
             year: "",
+            imgUrl:''
         });
         SetClose (false)
         toast.success('Đã Thêm Thành Công !')
@@ -35,6 +36,22 @@ const Modal = ({ onAdd ,member,HandleEdit,type}) => {
   const addMember = (member) => {
     setUser(member)
    }
+   const handelPreviewAvatar = (e) =>{
+     const file = e.target.files[0]
+     // console.log(file);
+     // console.log(URL.createObjectURL(file))
+     // const url =URL.createObjectURL(file.File)
+     // console.log(url)
+    //  setAvatar(URL.createObjectURL(file))
+     // console.log(avatar)
+     setUser({...user, imgUrl : URL.createObjectURL(file)})
+
+    }
+    useEffect(() => {
+      return () =>{
+      //  URL.revokeObjectURL(URL.createObjectURL())
+     }
+   },[user.imgUrl])
 
   return (
     <div>
@@ -79,10 +96,19 @@ const Modal = ({ onAdd ,member,HandleEdit,type}) => {
           <div className="contentModal">
             <label htmlFor="">Họ Và Tên</label>
             <input
+              
+     
               value={user.name}
               onChange={(e) => setUser({ ...user, name: e.target.value })}
               type="text"
               placeholder="Nhập Họ Và Tên"
+            />
+             <label htmlFor="">Chọn avatar</label>
+            <input
+              // value={user.imgUrl}
+              // onChange={(e) => setUser({ ...user, imgUrl: URL.createObjectURL(e.target.files) })}
+              onChange={handelPreviewAvatar}
+              type="file"
             />
             <label htmlFor="">Địa Chỉ</label>
             <input

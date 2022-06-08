@@ -11,6 +11,7 @@ function ContentComponent(props) {
             <tr className="data">
               <th>ID</th>
               <th>Username</th>
+              <th>Avatar</th>
               <th>Địa Chỉ</th>
               <th>Số Điện Thoại</th>
               <th>Ngày Sinh</th>
